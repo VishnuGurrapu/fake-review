@@ -1,0 +1,71 @@
+:root {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.review-input {
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+.check-button {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.check-button:hover {
+  background: #1f2937;
+}
+
+.result-box {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #111827;
+}
