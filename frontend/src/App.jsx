@@ -6,8 +6,12 @@ const API_URL = "https://web-production-b9abc.up.railway.app/predict";
 export default function App() {
   const [review, setReview] = useState("");
   const [prediction, setPrediction] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleCheckReview = async () => {
+    setLoading(true);
+    setPrediction("");
+
     try {
       const response = await fetch(API_URL, {
         method: "POST",
@@ -21,6 +25,8 @@ export default function App() {
       setPrediction(data.prediction || "No prediction");
     } catch (error) {
       setPrediction("Error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -37,8 +43,8 @@ export default function App() {
           rows={6}
         />
 
-        <button className="check-button" type="button" onClick={handleCheckReview}>
-          Check Review
+        <button className="check-button" type="button" onClick={handleCheckReview} disabled={loading}>
+          {loading ? "Checking..." : "Check Review"}
         </button>
 
         <div className="result-box">
